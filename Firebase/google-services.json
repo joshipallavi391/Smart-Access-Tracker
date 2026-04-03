@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "138886270972",
+    "firebase_url": "https://mart-access-tracker-default-rtdb.firebaseio.com",
+    "project_id": "mart-access-tracker",
+    "storage_bucket": "mart-access-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138886270972:android:f9b2a4055f1b80f0952c79",
+        "android_client_info": {
+          "package_name": "com.example.smartaccesstracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpl4AKr7jsom4agl_l9bi4NGhTcKMgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
