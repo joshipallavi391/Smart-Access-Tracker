@@ -18,6 +18,10 @@ The following rules are configured for Firebase Realtime Database access:
   }
 }
 
+### Collections
+- attendance – Stores daily attendance records by date and card UID
+- registered_cards – Maps RFID card UIDs to student names
+
 ### What these rules mean:
 - Read and write access was open to everyone until June 1, 2025.
 - After that date, access is restricted by default.
