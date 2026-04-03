@@ -1,57 +1,39 @@
 # Smart Access Tracker
-
 An RFID-based real-time attendance tracking system using ESP32,
 Google Sheets, Firebase, and an Android App.
 
----
-
 ## Working Flow
-
 RFID Card → RC522 Reader → ESP32 → WiFi → Google Apps Script
 → Google Sheets → Firebase Firestore → Android App
 
----
-
 ## Features
-
 - Contactless attendance using RFID cards
 - Real-time data sync to cloud
 - Mobile app for viewing attendance records
 - Audio (buzzer) and visual (LED) feedback on card scan
 - Daily and monthly attendance reports
 
----
-
 ## Hardware Used
-
 - ESP32 microcontroller
 - RC522 RFID Reader
 - RFID Cards
 - Buzzer
 - LED
 
----
-
 ## Software & Tools Used
-
 - Arduino IDE (ESP32 programming)
 - Google Apps Script (HTTP request handling)
 - Google Sheets (intermediate data storage)
 - Firebase Firestore (cloud database)
 - Android Studio (mobile app development)
 
----
-
 ## Project Structure
-
 Smart-Access-Tracker/
 │
 ├── Android_App/        → Android app source code + APK link
 ├── ESP32_Code/         → Arduino code for ESP32
 ├── Firebase/           → Firestore structure + configuration
 ├── Google_Apps_Script/ → Apps Script code + deployment steps
-
----
 
 ## Setup Instructions
 
@@ -79,16 +61,10 @@ Smart-Access-Tracker/
 2. Install on Android device
 3. Connect to internet and open the app
 
----
-
 ## APK Download
-
 See Android_App/README.md for the download link.
 
----
-
 ## Institution
-
 Banasthali Vidyapith
 School of Automation
 2025-26
