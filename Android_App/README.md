@@ -10,7 +10,7 @@ This app displays student attendance data in real-time using Firebase Firestore.
 - User-friendly interface
 
 ### APK Download
-https://drive.google.com/uc?export=download&id=1dwzBjPszTJ7o5tdSanPUl8I13bLr5QGF
+https://github.com/joshipallavi391/Smart-Access-Tracker/releases/download/v1.0/app-debug.apk
 
 ### Activities in this app
 - LoginActivity – Handles user login
