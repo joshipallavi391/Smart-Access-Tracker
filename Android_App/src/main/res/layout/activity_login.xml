@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#8FD9C3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App Title with White Outline -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart Access\nTracker"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#2C5F4F"
+            android:gravity="center"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="15"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.05"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Login Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2C5F4F"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:background="@android:color/white"
+            android:textColor="#2C5F4F"
+            android:textColorHint="#80CBC4"
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:drawablePadding="12dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:background="@android:color/white"
+            android:textColor="#2C5F4F"
+            android:textColorHint="#80CBC4"
+            android:layout_marginBottom="24dp"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:drawablePadding="12dp" />
+
+        <!-- ProgressBar - Loading Indicator (NAYA ADD KIYA) -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="#2C5F4F"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Login"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#2C5F4F"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Don't have account text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textSize="14sp"
+                android:textColor="#2C5F4F" />
+
+            <TextView
+                android:id="@+id/tvCreateAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create one."
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2C5F4F"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

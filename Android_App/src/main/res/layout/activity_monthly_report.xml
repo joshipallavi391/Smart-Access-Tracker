@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B0E0E6">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeaderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monthly Report"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#20B2AA"
+        android:gravity="center"
+        android:padding="20dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"/>
+
+    <!-- Month and Year Selector Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- Month Spinner -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Month"
+                        android:textSize="14sp"
+                        android:textColor="#20B2AA"
+                        android:textStyle="bold"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:drawable/spinner_background"/>
+                </LinearLayout>
+
+                <!-- Year Spinner -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        android:textSize="14sp"
+                        android:textColor="#20B2AA"
+                        android:textStyle="bold"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:drawable/spinner_background"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Load Report Button -->
+            <Button
+                android:id="@+id/btnLoadReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load Report"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#20B2AA"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Overall Statistics Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="#FFFFFF"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall Statistics"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#20B2AA"
+                android:layout_marginBottom="12dp"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- Total Students -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvTotalStudents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#20B2AA"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Students"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Average Attendance -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvAverageAttendance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avg Attendance"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Low Attendance Count -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvLowAttendanceCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#F44336"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low Attendance"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Student List RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStudents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone"/>
+
+    <!-- No Data Message -->
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="No data available for selected month"
+        android:textSize="16sp"
+        android:textColor="#20B2AA"
+        android:gravity="center"
+        android:visibility="gone"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"/>
+
+    <!-- Generate PDF Button -->
+    <Button
+        android:id="@+id/btnGeneratePDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate PDF Report"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#20B2AA"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+</LinearLayout>
