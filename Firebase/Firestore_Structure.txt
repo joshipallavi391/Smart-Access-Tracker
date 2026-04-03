@@ -1,0 +1,66 @@
+FIREBASE FIRESTORE STRUCTURE
+Smart Access Tracker
+
+----------------------------------------
+
+1. COLLECTION: attendance
+
+Description:
+Stores daily attendance records of students based on RFID card scans.
+
+Structure:
+
+attendance
+ ├── {date} (e.g., 2025-12-15)
+ │    ├── {card_UID}
+ │    │     └── absents: 0
+ │    │
+ │    ├── {card_UID}
+ │    │     └── absents: 0
+ │    │
+ │    └── {card_UID}
+ │          └── absents: 0
+ │
+ ├── 2025-12-21
+ │    ├── 21D83D02
+ │    ├── 2747ACB5
+ │    └── 3767B302
+ │
+ ├── 2025-12-22
+ │    └── 21D83D02
+ │
+ └── 2026-01-22
+      └── 3767B302
+
+
+----------------------------------------
+
+2. COLLECTION: registered_cards
+
+Description:
+Stores mapping between RFID card UID and student identity.
+
+Structure:
+
+registered_cards
+ ├── B332FF3E → STUDENT 1
+ ├── 21D83D02 → STUDENT 2
+ ├── B16C3502 → STUDENT 3
+ ├── A2BD3D02 → STUDENT 4
+ ├── BA034102 → STUDENT 5
+ ├── 3767B302 → STUDENT 6
+ ├── 6DA9B402 → STUDENT 7
+ ├── FAAAB402 → STUDENT 8
+ ├── E49F3502 → STUDENT 9
+ ├── DD4A3402 → STUDENT 10
+ └── 2747ACB5 → STUDENT 11
+
+
+----------------------------------------
+
+NOTES:
+
+- Each date document in "attendance" represents one day's record.
+- Each card UID represents a unique student.
+- Attendance is recorded when a card is scanned.
+- "registered_cards" is used to identify student names from UID.
